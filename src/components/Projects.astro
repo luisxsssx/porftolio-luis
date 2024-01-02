@@ -1,18 +1,27 @@
 ---
+import json from "./icons/Json.astro";
+
 const TAGS = {
   JWT: {
     name: "JWT",
     class: "bg-black text-white",
+    icon: json,
+  },
+  SPRING: {
+    name: "SPRING",
+    class: "bg-black text-white",
+    icon: json,
   },
 };
 
 const PROJECTS = [
   {
-    tittle: "Project 1",
-    description: "loremdjfbnvjfbeglgh",
+    tittle: "API + JWT",
+    description:
+      "En este proyecto creé una API que emplea Spring Security para la seguridad y utiliza JSON Web Token para autenticar a los usuarios.",
     github: "#",
     image: "",
-    tags: [TAGS.JWT],
+    tags: [TAGS.JWT, TAGS.SPRING],
   },
 ];
 ---
@@ -30,6 +39,7 @@ const PROJECTS = [
             <span
               class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
             >
+              <tag.icon class="size-4" />
               {tag.name}
             </span>
           </li>
