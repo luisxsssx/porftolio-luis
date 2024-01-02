@@ -1,16 +1,29 @@
 ---
-import json from "./icons/Json.astro";
+import Spring from "./icons/Spring.astro";
+import Docker from "./icons/Docker.astro";
+import Postgres from "./icons/Postgres.astro";
+import JavaIcon from "./icons/JavaIcon.astro";
 
 const TAGS = {
-  JWT: {
-    name: "JWT",
-    class: "bg-black text-white",
-    icon: json,
-  },
   SPRING: {
-    name: "SPRING",
+    name: "SpringBoot",
     class: "bg-black text-white",
-    icon: json,
+    icon: Spring,
+  },
+  POSTGRES: {
+    name: "PostgresSQL",
+    class: "bg-black text-white",
+    icon: Postgres,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: Docker,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: JavaIcon,
   },
 };
 
@@ -21,7 +34,7 @@ const PROJECTS = [
       "En este proyecto creé una API que emplea Spring Security para la seguridad y utiliza JSON Web Token para autenticar a los usuarios.",
     github: "#",
     image: "",
-    tags: [TAGS.JWT, TAGS.SPRING],
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRES, TAGS.DOCKER],
   },
 ];
 ---

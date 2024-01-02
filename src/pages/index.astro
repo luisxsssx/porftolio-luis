@@ -6,47 +6,56 @@ import GitHub from "../components/icons/GitHub.astro";
 import Mail from "../components/icons/Mail.astro";
 import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Ubicacion from "../components/icons/Ubicacion.astro";
 ---
 
 <Layout title="Luis Castro - Desarrollador Backend">
   <main class="px-4">
     <SectionContainer class="py-44 pb-32">
-      <img
-        class="rounded-full w-14 h-15 mb-5"
-        src="https://scontent.fmzt1-1.fna.fbcdn.net/v/t39.30808-6/416028335_1095031908604390_5243386546532131366_n.jpg?stp=dst-jpg_p526x296&_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=yDr6mBmW94AAX-ykQcd&_nc_ht=scontent.fmzt1-1.fna&oh=00_AfCAmB7uPwqK3beLgAEACMkYEML-qWsE4p_ju1m34sOxWg&oe=65990DD2"
-        alt="foto"
-      />
-      <h1
-        class="text-white text-5xl font-bold flex flex flex-row gap-x-4 pb-10"
-      >
-        Luis Castro
-      </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
-        Estudiante de Ingenieria de Software. Desarrollador Backend. De Guasave,
-        Sinaloa, México
+      <div class="flex items-center">
+        <img
+          class="rounded-full w-16 h-17 mb-8 mr-3"
+          src="https://scontent.fmzt1-1.fna.fbcdn.net/v/t39.30808-6/416028335_1095031908604390_5243386546532131366_n.jpg?stp=dst-jpg_p526x296&_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=yDr6mBmW94AAX-ykQcd&_nc_ht=scontent.fmzt1-1.fna&oh=00_AfCAmB7uPwqK3beLgAEACMkYEML-qWsE4p_ju1m34sOxWg&oe=65990DD2"
+          alt="foto"
+        />
+        <h2
+          class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-10 cd:text-5xl md:text-5xl"
+        >
+          Luis Castro
+        </h2>
+      </div>
+      <h2 class="text-white font-bold text-2xl opacity-80 text-wrap">
+        Estudiante de Ingeniería de Software. <br /> Desarrollador Backend <br
+        />
+        <div class="flex items-center">
+          <Ubicacion class="size-7 mr-2" />
+          <span class="text-yellow-500 dark:text-red-200">Guasave, Sinaloa, México</span>
+           
+        </div>
       </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/luis-castro-915515201/">
-          <LinkedIn class="w-6 h-6" />
+          <LinkedIn class="size-4 lg:size-6" />
            LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/luisxsssx">
-          <GitHub class="w-6 h-6" />
+          <GitHub class="size-4 lg:size-6" />
            GitHub
         </SocialPill>
         <SocialPill href="https://github.com/luisxsssx">
-          <Mail class="w-6 h-6" />
+          <Mail class="size-4 lg:size-6" />
            cd210902@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
-
     <SectionContainer id="proyectos">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
-        Proyectos
+        <CodeIcon class="size-7" />
+         Proyectos
       </h2>
       <Projects />
     </SectionContainer>
