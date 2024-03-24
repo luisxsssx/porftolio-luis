@@ -1,7 +1,7 @@
 ---
 import Spring from "./icons/Spring.astro";
-import Docker from "./icons/Docker.astro";
-import Postgres from "./icons/Postgres.astro";
+import TypeScript from "./icons/Docker.astro";
+import React from "./icons/React.astro";
 import JavaIcon from "./icons/JavaIcon.astro";
 
 const TAGS = {
@@ -10,15 +10,15 @@ const TAGS = {
     class: "bg-black text-white",
     icon: Spring,
   },
-  POSTGRES: {
-    name: "PostgresSQL",
+  REACT: {
+    name: "React",
     class: "bg-black text-white",
-    icon: Postgres,
+    icon: React,
   },
-  DOCKER: {
-    name: "Docker",
+  TYPESCRIPT: {
+    name: "TypeScript",
     class: "bg-black text-white",
-    icon: Docker,
+    icon: TypeScript,
   },
   JAVA: {
     name: "Java",
@@ -29,12 +29,12 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "API + JWT",
+    title: "HOME CLOUD",
     description:
-      "En este proyecto creé una API que emplea Spring Security para la seguridad y utiliza JSON Web Token para autenticar a los usuarios.",
+      "En el proyecto Home Cloud, estoy a cargo tanto del desarrollo del backend como del frontend. Utilizando Spring Boot para el backend y React para el frontend, aseguro una experiencia de usuario intuitiva en la gestión de archivos en la nube dentro de su entorno local.",
     github: "https://github.com/luisxsssx/usersFiles",
-    image: "/projects/670shots_so.webp",
-    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRES, TAGS.DOCKER],
+    image: "/projects/frontend.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.REACT, TAGS.TYPESCRIPT],
   },
 ];
 ---
@@ -50,7 +50,7 @@ const PROJECTS = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+              class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-1 px-2 border border-white/10`}
             >
               <tag.icon class="size-4" />
               {tag.name}
@@ -62,7 +62,7 @@ const PROJECTS = [
         loading="lazy"
         src={image}
         loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-video"
+        class="rounded-lg shadow-2xl shadow-white/10 aspect-video"
         alt={`Captura de pantalla del proyecto ${image}`}
       />
     </article>
