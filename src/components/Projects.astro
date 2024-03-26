@@ -1,6 +1,6 @@
 ---
 import Spring from "./icons/Spring.astro";
-import TypeScript from "./icons/Docker.astro";
+import TypeScript from "./icons/TypeScript.astro";
 import React from "./icons/React.astro";
 import JavaIcon from "./icons/JavaIcon.astro";
 
@@ -31,8 +31,7 @@ const PROJECTS = [
   {
     title: "HOME CLOUD",
     description:
-      "En el proyecto Home Cloud, estoy a cargo tanto del desarrollo del backend como del frontend. Utilizando Spring Boot para el backend y React para el frontend, aseguro una experiencia de usuario intuitiva en la gestión de archivos en la nube dentro de su entorno local.",
-    github: "https://github.com/luisxsssx/usersFiles",
+      "En el proyecto Home Cloud, estoy a cargo tanto del desarrollo del backend como del frontend. Utilizando Spring Boot para el backend y React para el frontend, aseguro una experiencia de usuario intuitiva en la gestión de archivos en la nube dentro de su entorno local.",  
     image: "/projects/frontend.webp",
     tags: [TAGS.JAVA, TAGS.SPRING, TAGS.REACT, TAGS.TYPESCRIPT],
   },
@@ -40,7 +39,7 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags, github }) => (
+  PROJECTS.map(({ image, title, description, tags }) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
         {title}

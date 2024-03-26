@@ -1,14 +1,54 @@
 ---
-
-const TAGS = {
-    
-}
-
+import Spring from "./icons/Spring.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import React from "./icons/React.astro";
+import JavaIcon from "./icons/JavaIcon.astro";
+import Linux from "./icons/Linux.astro";
+import Git from "./icons/Git.astro";
+import Docker from "./icons/Docker.astro";
+import Html from "./icons/Html.astro";
+import Postgres from "./icons/Postgres.astro";
+import Mysql from "./icons/Mysql.astro";
 
 const TECNOLOGIAS = [
-    {
-        title: "",
-    }
-]
+  {
+    icon: Spring,
+  },
+  {
+    icon: JavaIcon,
+  },
+  {
+    icon: Linux,
+  },
+  {
+    icon: Git,
+  },
+  {
+    icon: Docker,
+  },
 
+  {
+    icon: Postgres,
+  },
+  {
+    icon: Mysql,
+  },
+  {
+    icon: TypeScript,
+  },
+  {
+    icon: React,
+  },
+  {
+    icon: Html,
+  },
+];
 ---
+
+<article class="flex items-center space-x-2">
+  {
+    TECNOLOGIAS.map((tecnologia) => (
+      <span>{<tecnologia.icon class="w-11 h-11 md-5" />}</span>
+    ))
+  }
+</article>
