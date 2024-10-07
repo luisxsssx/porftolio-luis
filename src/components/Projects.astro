@@ -1,29 +1,46 @@
 ---
 import Spring from "./icons/Spring.astro";
 import TypeScript from "./icons/TypeScript.astro";
-import React from "./icons/React.astro";
+import React from "./icons/Angular.astro";
 import JavaIcon from "./icons/JavaIcon.astro";
+import GitHub from "./icons/GitHub.astro";
 
 const TAGS = {
+  BACKEND: {
+    name: "Backend",
+    class: "bg-black text-white",
+    icon: GitHub,
+    url: "https://github.com/luisxsssx/files.git",
+  },
+  FRONTEND: {
+    name: "Frontend",
+    class: "bg-black text-white",
+    icon: GitHub,
+    url: "https://github.com/luisxsssx/files-frontend.git",
+  },
   SPRING: {
     name: "SpringBoot",
     class: "bg-black text-white",
     icon: Spring,
+    url: "",
   },
   REACT: {
-    name: "React",
+    name: "Angular",
     class: "bg-black text-white",
     icon: React,
+    url: "",
   },
   TYPESCRIPT: {
     name: "TypeScript",
     class: "bg-black text-white",
     icon: TypeScript,
+    url: "",
   },
   JAVA: {
     name: "Java",
     class: "bg-black text-white",
     icon: JavaIcon,
+    url: "",
   },
 };
 
@@ -31,9 +48,16 @@ const PROJECTS = [
   {
     title: "HOME CLOUD",
     description:
-      "En el proyecto Home Cloud, estoy a cargo tanto del desarrollo del backend como del frontend. Utilizando Spring Boot para el backend y React para el frontend, aseguro una experiencia de usuario intuitiva en la gestión de archivos en la nube dentro de su entorno local.",  
+      "En este proyecto personal, he creado una solución de almacenamiento en la nube inspirada en Google Drive, que permite gestionar y acceder a tus archivos de forma segura y eficiente.",
     image: "/projects/frontend.webp",
-    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.REACT, TAGS.TYPESCRIPT],
+    tags: [
+      TAGS.BACKEND,
+      TAGS.FRONTEND,
+      TAGS.JAVA,
+      TAGS.SPRING,
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+    ],
   },
 ];
 ---
@@ -48,15 +72,28 @@ const PROJECTS = [
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
           <li>
-            <span
-              class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-1 px-2 border border-white/10`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
+            {tag.url ? ( // Verifica si hay URL
+              <a
+                href={tag.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-1 px-2 border border-white/10`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </a>
+            ) : (
+              <span
+                class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-1 px-2 border border-white/10`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            )}
           </li>
         ))}
       </ul>
+
       <img
         loading="lazy"
         src={image}
