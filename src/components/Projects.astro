@@ -4,6 +4,7 @@ import TypeScript from "./icons/TypeScript.astro";
 import React from "./icons/Angular.astro";
 import JavaIcon from "./icons/JavaIcon.astro";
 import GitHub from "./icons/GitHub.astro";
+import Web from "./icons/web.astro";
 
 const TAGS = {
   BACKEND: {
@@ -11,6 +12,18 @@ const TAGS = {
     class: "bg-black text-white",
     icon: GitHub,
     url: "https://github.com/luisxsssx/files.git",
+  },
+  REPO: {
+    name: "Frontend",
+    class: "bg-black text-white",
+    icon: GitHub,
+    url: "https://github.com/luisxsssx/password-generator.git",
+  },
+  DEMO: {
+    name: "Demo",
+    class: "bg-black text-white",
+    icon: Web,
+    url: "https://password-manager-3atbocmu0-luisxsssxs-projects.vercel.app/",
   },
   FRONTEND: {
     name: "Frontend",
@@ -24,7 +37,7 @@ const TAGS = {
     icon: Spring,
     url: "",
   },
-  REACT: {
+  ANGULAR: {
     name: "Angular",
     class: "bg-black text-white",
     icon: React,
@@ -46,16 +59,23 @@ const TAGS = {
 
 const PROJECTS = [
   {
+    title: "PASSWORD MANAGER",
+    description:
+      "Este proyecto es un gestor de contraseñas que permite a los usuarios generar contraseñas seguras y cifrar/descifrar texto mediante el algoritmo AES-256-CBC. Es una aplicación web construida con Angular en el frontend y utiliza CryptoJS para el cifrado y descifrado de datos..",
+    image: "/projects/password.webp",
+    tags: [TAGS.REPO, TAGS.DEMO, TAGS.ANGULAR, TAGS.TYPESCRIPT],
+  },
+  {
     title: "HOME CLOUD",
     description:
-      "En este proyecto personal, he creado una solución de almacenamiento en la nube inspirada en Google Drive, que permite gestionar y acceder a tus archivos de forma segura y eficiente.",
-    image: "/projects/frontend.webp",
+      "En este proyecto personal, he creado una solución de almacenamiento en la nube inspirada en Google Drive, que permite gestionar y acceder a tus archivos de forma segura y eficiente. **Nota: Este proyecto aún está en desarrollo.**",
+    image: "/projects/files.webp",
     tags: [
       TAGS.BACKEND,
       TAGS.FRONTEND,
       TAGS.JAVA,
       TAGS.SPRING,
-      TAGS.REACT,
+      TAGS.ANGULAR,
       TAGS.TYPESCRIPT,
     ],
   },
@@ -72,7 +92,7 @@ const PROJECTS = [
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
           <li>
-            {tag.url ? ( // Verifica si hay URL
+            {tag.url ? (
               <a
                 href={tag.url}
                 target="_blank"
@@ -101,6 +121,8 @@ const PROJECTS = [
         class="rounded-lg shadow-2xl shadow-white/10 aspect-video"
         alt={`Captura de pantalla del proyecto ${image}`}
       />
+
+      <br />
     </article>
   ))
 }
